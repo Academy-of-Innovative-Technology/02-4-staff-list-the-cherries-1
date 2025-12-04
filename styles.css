@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+	padding-top: 15px;
+}
+
+table td:hover {
+    background-color: rgba(0,0,0,.075);
+}
+
+.logo {
+    margin-top: 10px;
+    text-align: center;
+}
