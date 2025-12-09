@@ -28,8 +28,7 @@ const closeBtn = document.querySelector('.close-btn');
 const form = document.getElementById('edit-form');
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const manageAccountBtn = document.getElementById('pfp');
+document.addEventListener("DOMContentLoaded", () => { 
   const editModal = document.getElementById('edit-modal');
   const editCloseBtn = document.querySelector('#edit-modal .close-btn');
   const editForm = document.getElementById('edit-form');
