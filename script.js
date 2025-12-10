@@ -21,192 +21,616 @@ let
 
 ////////// MAKE YOUR UPDATES WITHIN THIS SECTION //// 
 
-
-const manageAccountBtn = document.getElementById('pfp');
-const modal = document.getElementById('edit-modal');
-const closeBtn = document.querySelector('.close-btn');
-const form = document.getElementById('edit-form');
-
-
-document.addEventListener("DOMContentLoaded", () => { 
-  const editModal = document.getElementById('edit-modal');
-  const editCloseBtn = document.querySelector('#edit-modal .close-btn');
-  const editForm = document.getElementById('edit-form');
-
-  manageAccountBtn.addEventListener('click', () => {
-    editModal.style.display = 'flex';
-  });
-
-  editCloseBtn.addEventListener('click', () => {
-    editModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === editModal) {
-      editModal.style.display = 'none';
-    }
-  });
-
-  editForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const newName = document.getElementById('name').value;
-    const fileInput = document.getElementById('edit-avatar'); // Updated ID
-
-    if (fileInput.files.length > 0) {
-      const file = fileInput.files[0];
-
-      if (!file.type.startsWith('image/')) {
-        alert('Please upload a valid image file.');
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        manageAccountBtn.style.backgroundImage = `url(${e.target.result})`;
-        manageAccountBtn.style.backgroundSize = 'cover';
-      };
-      reader.readAsDataURL(file);
-    }
-
-    editModal.style.display = 'none';
-  });
-
-  const villagers = [
-    {
-      id: 1,
-      villager: 'Raymond',
-      species: 'Cat',
-      color: '#B0B3B7',
-      avatar: 'https://files.catbox.moe/5hybew.jpg'
-    },
-    {
-      id: 2,
-      villager: 'Stitches',
-      species: 'Cub',
-      color: '#FFB3BA',
-      avatar: 'https://files.catbox.moe/r8b90d.png'
-    },
-    {
-      id: 3,
-      villager: 'Erik',
-      species: 'Deer',
-      color: '#D2B48C',
-      avatar: 'https://files.catbox.moe/7w1yyb.jpg'
-    }
-  ];
-
-  function createVillagerCard(villagerItem) {
-    return `
-      <div class="card-wrapper">
-        <div class="class-card" style="background-color: ${villagerItem.color};">
-          <div class="avatar" style="background-image: url(${villagerItem.avatar});"></div>
-          <div class="info">
-            <h3>${villagerItem.villager}</h3>
-            <p class="species">${villagerItem.species}</p>
-          </div>
-        </div>
-      </div>
-    `;
+document.addEventListener("DOMContentLoaded", (event) => {
+  
+  //creating variable for HTML
+  let body = document.querySelector(".main");
+  
+  //array of objects of all teachers
+  const principals = [
+    { 
+       name: "Ms. Lynch",
+      email: "ms.lynch@aoiths.org",
+      role: "Principal",
+      color: "grey"
+  },
+  { 
+      name: "Ms Woodham",
+      email: "ms.woodham@aoiths.org",
+      role: "Assistant principal",
+      color: "grey"
+  },
+  { 
+      name: "Ms. Simpkins",
+      email: "ms.simpkins@aoiths.org",
+      role: "assistant principal",
+      color: "grey"
   }
-
-  const villagerContainer = document.getElementById('class-container');
-  villagers.forEach(villagerItem => {
-    villagerContainer.insertAdjacentHTML('beforeend', createVillagerCard(villagerItem));
-  });
-
-
-  addMemberBtn.addEventListener('click', () => {
-    addMemberModal.style.display = 'flex';
-  });
-
-  addCloseBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      addMemberModal.style.display = 'none';
-    });
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === addMemberModal) {
-      addMemberModal.style.display = 'none';
+  
+  ]; 
+  
+  const mainOffice = [
+    {
+      role: "Main Office"
+    },
+    { 
+      name: "Mr. Valentin",
+      email: "mr.valentin@aoiths.org",
+      color: "red"
+    },
+    { 
+      name: "Mr. Martinez",
+      email: "mr.Martinez@aoiths.org",
+      color: "red"
+    },
+    { 
+      name: "Ms. Tirado",
+      email: "ms.tirado@aoiths.org",
+      color: "red"
+    },
+  ]; 
+  
+  const  deans = [
+    {
+      role: "Deans"
+    },
+    { 
+      name: "Mr. Frazer",
+      email: "mr.frazer@aoiths.org",
+      color: "yellow"
+  },
+  { 
+      name: "Mr. Mollison",
+      email: "mr.mollison@aoiths.org",
+      color: "yellow"
+  }
+  ];
+  
+  const counselors = [
+    {
+      role: "Counselors"
+    },
+    {
+       name: "Ms Cooper",
+      email: "ms.cooper@aoiths.org",
+      color: "off white"
+    },
+    {
+       name: "Ms. Desroches",
+      email: "ms.desroches@aoiths.org",
+      color: "off white"
+    },
+    {
+       name: "Mr. Molina",
+      email: "mr.molina@aoiths.org",
+      color: "off white"
+    },
+    {
+       name: "Ms. chua",
+      email: "ms.chua@aoiths.org",
+      color: "off white"
+    },
+    {
+      name: "Ms. Greenberg",
+      email: "ms.greenberg@aoiths.org",
+      color: "off white"
+    },
+    {
+       name: "Mr. Ricky",
+      email: "mr.guzman@aoiths.org", 
+      color: "off white"
+    },
+   {
+     name:"Ms. Slater",
+     email:"ms.slater@aoiths.org",
+     color:"off white"
+   }
+    ]
+  
+  const cteTeachers = [
+    {
+      role: "CTE department"
+    },
+    { 
+      name: "Mr. Alphonse",
+      email: "mr.alphonse@aoiths.org",
+      color: "teal"
+  },
+  { 
+      name: "Mr. Shams",
+      email: "mr.shams@aoiths.org",
+      color: "teal"
+  },
+  { 
+      name: "Mr. Gomes",
+      email: "mr.gomes@aoiths.org",
+      color: "teal"
+  },
+  { 
+      name: "Mr. Pelzer",
+      email: "mr.pelzer@aoiths.org",
+      color: "teal"
+  },
+  { 
+      name: "Ms. Ramswarak",
+      email: "ms.ramsawak2@aoiths.org",
+      color: "teal"
+  }
+  
+  ]; 
+  
+  const englishTeachers = [
+    {
+      role: "English department"
+    },
+    { 
+      name: "Ms. Gomez",
+      email: "ms.gomez@aoiths.org",
+      color: "lavender"
+  },
+  { 
+      name: "Ms. Taveras",
+      email: "ms.taveras@aoiths.org",
+      color: "lavender"
+  },
+  { 
+      name: "Mr. Grant",
+      email: "mr.grant@aoiths.org",
+      color: "lavender"
+  },
+  { 
+      name: "Ms. Grizell",
+      email: "ms.griszell@aoiths.org",
+      color: "lavender"
+  },
+  { 
+      name: "Ms.Sherman",
+      email: "ms.sherman@aoiths.org",
+      color: "lavender"
+  }
+  
+  ]; 
+  
+  const mathTeachers = [
+    {
+      role: "Math department"
+    },
+    { 
+      name: "Mr. Koelsh",
+      email: "mr.koelsch@aoiths.org",
+      color: "blue"
+  },
+  { 
+      name: "Mr. Forth",
+      email: "mr.forth@aoiths.org",
+      color: "blue"
+  },
+  { 
+      name: "Ms. Freck",
+      email: "ms.freck@aoiths.org",
+      color: "blue"
+  },
+  { 
+      name: "Ms. Minto",
+      email: "ms.minto@aoiths.org",
+      color: "blue"
+  },
+  { 
+      name: "Mr. Wong",
+      email: "mr.wong@aoiths.org",
+      color: "blue"
+  },
+  { 
+      name: "Mr. Steele",
+      email: "mr.steele@aoiths.org",
+      color: "blue"
+  }
+  
+  ]; 
+  
+  const  socialStudies = [
+    {
+      role: "History Department"
+    },
+    { 
+      name: "Ms. Urena",
+      email: "ms.urena@aoiths.org",
+      color: "orange"
+  },
+  { 
+      name: "Mr. Amell",
+      email: "mr.amell@aoiths.org",
+      color: "orange"
+  },
+  { 
+      name: "Mr. Lucas",
+      email: "mr.lucas@aoiths.org",
+      color: "orange"
+  },
+  { 
+      name: "Mr. Rodriguez",
+      email: "mr.Rodriguez@aoiths.org",
+      color: "orange"
+  },
+  { 
+      name: "Mr. Smith",
+      email: "mr.smith@aoiths.org",
+      color: "orange"
+  },
+  {
+    name: "Mr. Headlam",
+    email: "mr.headlam@aoiths.org",
+    color: "orange"
+  }
+  ]; 
+  
+  const  gymTeachers = [
+    {
+      role: "Physical Education Department"
+    },
+    { 
+      name: "Mr. Banta",
+      email: "mr.banta@aoiths.org",
+      color: "dark green"
+  },
+  { 
+      name: "Mr. Macalary",
+      email: "mr.mcalary@aoiths.org",
+      color: "dark green"
+  }
+  
+  ]; 
+  
+  const artTeacher = [
+    {
+      role: "Art Department"
+    },
+    {
+    name: "Mr. Sullivan",
+      email: "mr.sullivan@aoiths.org",
+      color: "pink"
     }
-  });
-
-  addVillagerForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const villagerName = document.getElementById('villager-name').value;
-    const species = document.getElementById('species').value;
-    const color = document.getElementById('villager-color').value; // Updated ID
-    const avatarInput = document.getElementById('villager-avatar'); // Updated ID
-
-    if (avatarInput.files.length > 0) {
-      const file = avatarInput.files[0];
-      const reader = new FileReader();
-
-      reader.onloadend = function() {
-        const newVillager = {
-          id: villagers.length + 1,
-          villager: villagerName,
-          species: species,
-          color: color,
-          avatar: reader.result
-        };
-
-        villagers.push(newVillager);
-        villagerContainer.insertAdjacentHTML('beforeend', createVillagerCard(newVillager));
-
-        addVillagerForm.reset();
-        addMemberModal.style.display = 'none';
-      };
-
-      reader.readAsDataURL(file);
-    } else {
-      alert('Please select an avatar file.');
+    ];
+    
+  const spanishTeacher = [
+    {
+      role: "Spanish Department"
+    },
+    {
+    name: "Ms. Vallejo",
+      email: "ms.vallejo@aoiths.org",
+      color: "tan"
     }
-  });
+    ];
+    
+  const ellTeachers = [
+    {
+      role: "English Language Learning Department"
+    },
+    {
+      name: "Ms. Mott",
+      email: "ms.mott@aoiths.org",
+      color: "dark purple"
+    },
+    {
+      name: "Ms. Weaver",
+      email: "ms.weaver@aoiths.org",
+      color: "dark purple"
+    }
+    ];
+    
+  const scienceTeachers = [
+    {
+      role: "Science Department"
+    },
+    { 
+      name: "Ms. Davies",
+      email: "ms.davies@aoiths.org",
+      color: "green"
+  },
+  { 
+      name: "Ms. Moreno",
+      email: "ms.moreno@aoiths.org",
+      color: "green"
+  },
+  {
+      name: "Ms. Kabir",
+      email: "ms.kabir@aoiths.org",
+      color: "green"
+  },
+  { 
+      name: "Mr. Lynch",
+      email: "mr.Tlynch@aoiths.org",
+      color: "green"
+  },
+  { 
+      name: "Mr David",
+      email: "mr.david@aoiths.org",
+      color: "green"
+  }
+  
+  
+  ];
+  
+  const techSupport = [
+    {
+      role: "IT and Tech Support"
+    },
+    {
+       name: "Mr. Howell",
+      email: "mr.howell@aoiths.org",
+      color: "dark teal"
+    }
+    ];
+    
+  const paras = [
+     { 
+      name: "Mr. Palmeri",
+      email: "mr.palmeri@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Grizell",
+      email: "mr.dgriszell@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Rahimi",
+      email: "ms.rahimi@aoiths.org",
+      color: "almond brown"
+  },
+   { 
+      name: "Mr. Ahad",
+      email: "mr.ahad@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Belfon",
+      email: "mr.belfon@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Colter",
+      email: "mr.colter@aoiths.org",
+      color: "almond brown"
+  },
+   { 
+      name: "Ms. Nicholson",
+      email: "ms.nicholson@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Shand",
+      email: "ms.shand@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Camilo",
+      email: "ms.camilo@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Ward",
+      email: "mr.ward@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Nowakowski",
+      email: "ms.nowakowski@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Belgrave",
+      email: "mr.belgrave@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Swing",
+      email: "ms.swing@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Ms. Boswell",
+      email: "ms.boswell@aoiths.org",
+      color: "almond brown"
+  },
+  { 
+      name: "Mr. Jorge",
+      email: "mr.jorge@aoiths.org",
+      color: "almond brown"
+  }
+    ];
+    
+    
+  console.log(principals);
+  console.log(mainOffice);
+  console.log(deans);
+  console.log(counselors);
+  console.log(cteTeachers);
+  console.log(englishTeachers);
+  console.log(mathTeachers);
+  console.log(socialStudies);
+  console.log(gymTeachers);
+  console.log(artTeacher);
+  console.log(spanishTeacher);
+  console.log(ellTeachers);
+  console.log(scienceTeachers);
+  console.log(techSupport);
+  console.log(random);
+  
+  
+ principals.forEach(person => {
+  body.innerHTML += `
+    <div>
+      <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
 });
 
 
+mainOffice.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+deans.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+counselors.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+cteTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+englishTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+mathTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+socialStudies.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+gymTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+artTeacher.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+spanishTeacher.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+ellTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+scienceTeachers.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+techSupport.forEach(person => {
+  body.innerHTML += `
+    <div>
+    <h1>${person.role}</h1>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+paras.forEach(person => {
+  body.innerHTML += `
+    <div>
+      <h3>${person.name}</h3>
+      <p>Email: ${person.email}</p>
+    </div>
+  `;
+});
 
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+const  = [
+    { 
+      "name": "",
+      "email": "",
+      "color": ""
+  },
+  { 
+      "name": "",
+      "email": "",
+      "color": ""
+  },
+  { 
+      "name": "",
+      "email": "",
+      "color": ""
+  }
+  
+  ]; 
+*/
 /////////////////////////////////////////////////////
 //////// DO NOT EDIT BELOW THIS LINE ////////////////
 /////////////////////////////////////////////////////
