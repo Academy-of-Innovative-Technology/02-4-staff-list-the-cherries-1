@@ -114,10 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     villagerContainer.insertAdjacentHTML('beforeend', createVillagerCard(villagerItem));
   });
 
-  const addMemberBtn = document.getElementById('add-member');
-  const addMemberModal = document.getElementById('add-member-modal');
-  const addCloseBtns = document.querySelectorAll('#add-member-modal .close-btn');
-  const addVillagerForm = document.getElementById('add-villager-form');
 
   addMemberBtn.addEventListener('click', () => {
     addMemberModal.style.display = 'flex';
