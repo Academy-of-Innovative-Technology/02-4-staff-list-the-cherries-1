@@ -32,321 +32,330 @@ document.addEventListener("DOMContentLoaded", (event) => {
        name: "Ms. Lynch",
       email: "ms.lynch@aoiths.org",
       role: "Principal",
-      color: "grey"
+      color: "#706563"
   },
   { 
       name: "Ms Woodham",
       email: "ms.woodham@aoiths.org",
       role: "Assistant principal",
-      color: "grey"
+      color: "#706563"
   },
   { 
       name: "Ms. Simpkins",
       email: "ms.simpkins@aoiths.org",
-      role: "assistant principal",
-      color: "grey"
+      role: "Assistant principal",
+      color: "#706563"
   }
   
   ]; 
   
   const mainOffice = [
-    {
-      role: "Main Office"
-    },
     { 
       name: "Mr. Valentin",
       email: "mr.valentin@aoiths.org",
-      color: "red"
+      role: "main office coordinator",
+      color: "#c1121f"
     },
     { 
       name: "Mr. Martinez",
       email: "mr.Martinez@aoiths.org",
-      color: "red"
+      role: "main office coordinator",
+      color: "#c1121f"
     },
     { 
       name: "Ms. Tirado",
       email: "ms.tirado@aoiths.org",
-      color: "red"
+      role: "main office coordinator",
+      color: "#c1121f"
     },
   ]; 
   
   const  deans = [
-    {
-      role: "Deans"
-    },
     { 
       name: "Mr. Frazer",
       email: "mr.frazer@aoiths.org",
-      color: "yellow"
+      role: "Dean",
+      color: "#ffe246"
   },
   { 
       name: "Mr. Mollison",
       email: "mr.mollison@aoiths.org",
-      color: "yellow"
+      role: "Dean",
+      color: "#ffe246"
   }
   ];
   
   const counselors = [
     {
-      role: "Counselors"
-    },
-    {
        name: "Ms Cooper",
       email: "ms.cooper@aoiths.org",
-      color: "off white"
+      role: "senior counselor",
+      color: "#fefae0"
     },
     {
        name: "Ms. Desroches",
       email: "ms.desroches@aoiths.org",
-      color: "off white"
+      role: "9th and 10 grade counselor",
+      color: "#fefae0"
     },
     {
        name: "Mr. Molina",
       email: "mr.molina@aoiths.org",
-      color: "off white"
+      role: "school social worker",
+      color: "#fefae0"
     },
     {
        name: "Ms. chua",
       email: "ms.chua@aoiths.org",
-      color: "off white"
+      role: "intern",
+      color: "#fefae0"
     },
     {
       name: "Ms. Greenberg",
       email: "ms.greenberg@aoiths.org",
-      color: "off white"
+      role: "intern",
+      color: "#fefae0"
     },
     {
        name: "Mr. Ricky",
       email: "mr.guzman@aoiths.org", 
-      color: "off white"
+      role:"College counselor",
+      color: "#fefae0"
     },
    {
      name:"Ms. Slater",
      email:"ms.slater@aoiths.org",
-     color:"off white"
+     role: "special education counselor",
+     color:"#fefae0"
    }
     ]
   
   const cteTeachers = [
-    {
-      role: "CTE department"
-    },
     { 
       name: "Mr. Alphonse",
       email: "mr.alphonse@aoiths.org",
-      color: "teal"
+      role: "IT and computer systems teacher",
+      color: "#34a0a4"
   },
   { 
       name: "Mr. Shams",
       email: "mr.shams@aoiths.org",
-      color: "teal"
+      role: "Game design teacher",
+      color: "#34a0a4"
   },
   { 
       name: "Mr. Gomes",
       email: "mr.gomes@aoiths.org",
-      color: "teal"
+      role: "Web design teacher",
+      color: "#34a0a4"
   },
   { 
       name: "Mr. Pelzer",
       email: "mr.pelzer@aoiths.org",
-      color: "teal"
+      role: "AP Computer science teacher",
+      color: "#34a0a4"
   },
   { 
       name: "Ms. Ramswarak",
       email: "ms.ramsawak2@aoiths.org",
-      color: "teal"
+      role: "cybersecurity and graphic design teacher",
+      color: "#34a0a4"
   }
   
   ]; 
   
   const englishTeachers = [
-    {
-      role: "English department"
-    },
     { 
       name: "Ms. Gomez",
       email: "ms.gomez@aoiths.org",
-      color: "lavender"
+      role: "AP English Language and Composition",
+      color: "#B8C4F5"
   },
   { 
       name: "Ms. Taveras",
       email: "ms.taveras@aoiths.org",
-      color: "lavender"
+      role: "AP English Literature and Composition",
+      color: "#B8C4F5"
   },
   { 
       name: "Mr. Grant",
       email: "mr.grant@aoiths.org",
-      color: "lavender"
+      role: "9th and 10th grade english teacher",
+      color: "#B8C4F5"
   },
   { 
       name: "Ms. Grizell",
       email: "ms.griszell@aoiths.org",
-      color: "lavender"
+      role: "9th and 10th grade teacher",
+      color: "#B8C4F5"
   },
   { 
       name: "Ms.Sherman",
       email: "ms.sherman@aoiths.org",
-      color: "lavender"
+      role: "Social studies and english teacher",
+      color: "#B8C4F5"
   }
   
   ]; 
   
   const mathTeachers = [
-    {
-      role: "Math department"
-    },
     { 
       name: "Mr. Koelsh",
       email: "mr.koelsch@aoiths.org",
-      color: "blue"
+      role: "AP Calculus AB, precalculus, and geometry",
+      color: "#A1B5D8"
   },
   { 
       name: "Mr. Forth",
       email: "mr.forth@aoiths.org",
-      color: "blue"
+      role: "teacher",
+      color: "#A1B5D8"
   },
   { 
       name: "Ms. Freck",
       email: "ms.freck@aoiths.org",
-      color: "blue"
+      role: "Algebra 1 teacher, and senior coordinator",
+      color: "#A1B5D8"
   },
   { 
       name: "Ms. Minto",
       email: "ms.minto@aoiths.org",
-      color: "blue"
+      role: "teacher",
+      color: "#A1B5D8"
   },
   { 
       name: "Mr. Wong",
       email: "mr.wong@aoiths.org",
-      color: "blue"
+      role: "Algebra 2 teacher",
+      color: "#A1B5D8"
   },
   { 
       name: "Mr. Steele",
       email: "mr.steele@aoiths.org",
-      color: "blue"
+      role: "PBL math and Algebra 2 teacher",
+      color: "#A1B5D8"
   }
   
   ]; 
   
   const  socialStudies = [
-    {
-      role: "History Department"
-    },
     { 
       name: "Ms. Urena",
       email: "ms.urena@aoiths.org",
-      color: "orange"
+      role: "AP US government and politics teacher",
+      color: "#E5B25D"
   },
   { 
       name: "Mr. Amell",
       email: "mr.amell@aoiths.org",
-      color: "orange"
+      role: "AP US History teacher",
+      color: "#E5B25D"
   },
   { 
       name: "Mr. Lucas",
       email: "mr.lucas@aoiths.org",
-      color: "orange"
+      role: "art history and global history and geography teacher",
+      color: "#E5B25D"
   },
   { 
       name: "Mr. Rodriguez",
       email: "mr.Rodriguez@aoiths.org",
-      color: "orange"
+      role: "Global history and geography teacher",
+      color: "#E5B25D"
   },
   { 
       name: "Mr. Smith",
       email: "mr.smith@aoiths.org",
-      color: "orange"
+      role: "global history and geography teacher",
+      color: "#E5B25D"
   },
   {
     name: "Mr. Headlam",
     email: "mr.headlam@aoiths.org",
-    color: "orange"
+    role: "AP African American history",
+    color: "#E5B25D"
   }
   ]; 
   
   const  gymTeachers = [
-    {
-      role: "Physical Education Department"
-    },
     { 
       name: "Mr. Banta",
       email: "mr.banta@aoiths.org",
-      color: "dark green"
+      role: "Physical Education and health teacher",
+      color: "#679436"
   },
   { 
       name: "Mr. Macalary",
       email: "mr.mcalary@aoiths.org",
-      color: "dark green"
+      role: "physical education and health teacher",
+      color: "#679436"
   }
   
   ]; 
   
   const artTeacher = [
     {
-      role: "Art Department"
-    },
-    {
-    name: "Mr. Sullivan",
+      name: "Mr. Sullivan",
       email: "mr.sullivan@aoiths.org",
-      color: "pink"
+      role: "studio art teacher and 4H ambassador",
+      color: "#FBACBE"
     }
     ];
     
   const spanishTeacher = [
     {
-      role: "Spanish Department"
-    },
-    {
     name: "Ms. Vallejo",
       email: "ms.vallejo@aoiths.org",
-      color: "tan"
+      role: "spanish teacher",
+      color: "#F5DBCB"
     }
     ];
     
   const ellTeachers = [
     {
-      role: "English Language Learning Department"
-    },
-    {
       name: "Ms. Mott",
       email: "ms.mott@aoiths.org",
-      color: "dark purple"
+      role: "ELL teacher",
+      color: "#3a015c"
     },
     {
       name: "Ms. Weaver",
       email: "ms.weaver@aoiths.org",
-      color: "dark purple"
+      role: "ELL teacher",
+      color: "#3a015c"
     }
     ];
     
   const scienceTeachers = [
-    {
-      role: "Science Department"
-    },
     { 
       name: "Ms. Davies",
       email: "ms.davies@aoiths.org",
-      color: "green"
+      role: "Earth science teacher",
+      color: "#D2E0BF"
   },
   { 
       name: "Ms. Moreno",
       email: "ms.moreno@aoiths.org",
-      color: "green"
+      role: "Earth science teacher",
+      color: "#D2E0BF"
   },
   {
       name: "Ms. Kabir",
       email: "ms.kabir@aoiths.org",
-      color: "green"
+      role: "Living Enviroment teacher and para professional",
+      color: "#D2E0BF"
   },
   { 
       name: "Mr. Lynch",
       email: "mr.Tlynch@aoiths.org",
-      color: "green"
+      role: "chemistry teacher",
+      color: "#D2E0BF"
   },
   { 
       name: "Mr David",
       email: "mr.david@aoiths.org",
-      color: "green"
+      role: "science teacher",
+      color: "#D2E0BF"
   }
   
   
@@ -354,90 +363,104 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   const techSupport = [
     {
-      role: "IT and Tech Support"
-    },
-    {
        name: "Mr. Howell",
       email: "mr.howell@aoiths.org",
-      color: "dark teal"
+      role: "IT and Tech Support",
+      color: "#168aad"
     }
     ];
     
-  const paras = [
+  //remember to find out what these teachers do
+  const paraProfessionals = [
      { 
       name: "Mr. Palmeri",
       email: "mr.palmeri@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Grizell",
       email: "mr.dgriszell@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Rahimi",
       email: "ms.rahimi@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
    { 
       name: "Mr. Ahad",
       email: "mr.ahad@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Belfon",
       email: "mr.belfon@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Colter",
       email: "mr.colter@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
    { 
       name: "Ms. Nicholson",
       email: "ms.nicholson@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Shand",
       email: "ms.shand@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Camilo",
       email: "ms.camilo@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Ward",
       email: "mr.ward@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Nowakowski",
       email: "ms.nowakowski@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Belgrave",
       email: "mr.belgrave@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Swing",
       email: "ms.swing@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Ms. Boswell",
       email: "ms.boswell@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   },
   { 
       name: "Mr. Jorge",
       email: "mr.jorge@aoiths.org",
-      color: "almond brown"
+      role: "Para professional",
+      color: "#b08968"
   }
     ];
     
@@ -456,181 +479,44 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log(ellTeachers);
   console.log(scienceTeachers);
   console.log(techSupport);
-  console.log(random);
+  console.log(paraProfessionals);
   
   
- principals.forEach(person => {
-  body.innerHTML += `
-    <div>
-      <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
+function render(arr) {
+  arr.forEach(person => {
+    body.innerHTML += `
+    <div class="cardWrapper">
+      <div class="card" style="background-color: ${person.color};">
+      <div class="cardInfo">
+        <h3>${person.name}</h3>
+        <p>${person.role}</p>
+        <p>${person.email}</p>
+        </div>
+      </div>
+      </div>
+    `;
+  });
+}
 
+render(principals);
+render(mainOffice);
+render(deans);
+render(counselors);
+render(cteTeachers);
+render(englishTeachers);
+render(mathTeachers);
+render(socialStudies);
+render(gymTeachers);
+render(artTeacher);
+render(spanishTeacher);
+render(ellTeachers);
+render(scienceTeachers);
+render(techSupport);
+render(paraProfessionals);
 
-mainOffice.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-deans.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-counselors.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-cteTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-englishTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-mathTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-socialStudies.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-gymTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-artTeacher.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-spanishTeacher.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-ellTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-scienceTeachers.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-techSupport.forEach(person => {
-  body.innerHTML += `
-    <div>
-    <h1>${person.role}</h1>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
-
-paras.forEach(person => {
-  body.innerHTML += `
-    <div>
-      <h3>${person.name}</h3>
-      <p>Email: ${person.email}</p>
-    </div>
-  `;
-});
 
 });
 
-/*
-const  = [
-    { 
-      "name": "",
-      "email": "",
-      "color": ""
-  },
-  { 
-      "name": "",
-      "email": "",
-      "color": ""
-  },
-  { 
-      "name": "",
-      "email": "",
-      "color": ""
-  }
-  
-  ]; 
-*/
 /////////////////////////////////////////////////////
 //////// DO NOT EDIT BELOW THIS LINE ////////////////
 /////////////////////////////////////////////////////
