@@ -502,5 +502,3 @@ render(paraProfessionals);
 
 
 });
-
-//complete
