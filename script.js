@@ -462,7 +462,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log(mathTeachers);
   console.log(socialStudies);
   console.log(gymTeachers);
-  console.log(artTeacher);
   console.log(spanishTeacher);
   console.log(ellTeachers);
   console.log(scienceTeachers);
@@ -495,7 +494,6 @@ render(englishTeachers);
 render(mathTeachers);
 render(socialStudies);
 render(gymTeachers);
-render(artTeacher);
 render(spanishTeacher);
 render(ellTeachers);
 render(scienceTeachers);
