@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       role: "main office coordinator",
       color: "#c1121f"
     },
+    {
+      name: "Ms.sweeney",
+      email: "ms.sweeney@aoiths.org",
+      role: "main office coordinator and counselor support",
+      color: "#c1121f"
+    }
   ]; 
   
   const  deans = [
@@ -139,8 +145,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
       email: "ms.ramsawak2@aoiths.org",
       role: "cybersecurity and graphic design teacher",
       color: "#34a0a4"
+  },
+  {
+    name: "Mr. Sullivan",
+      email: "mr.sullivan@aoiths.org",
+      role: "studio art teacher and 4H ambassador",
+      color: "#34a0a4"
+  },
+  {
+    name: "Mr Pierre",
+    email: "mr.pierre@aoiths.org",
+    role: "Web design teacher",
+    color: "#34a0a4"
   }
-  
+
   ]; 
   
   const englishTeachers = [
@@ -272,15 +290,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   ]; 
   
-  const artTeacher = [
-    {
-      name: "Mr. Sullivan",
-      email: "mr.sullivan@aoiths.org",
-      role: "studio art teacher and 4H ambassador",
-      color: "#FBACBE"
-    }
-    ];
-    
   const spanishTeacher = [
     {
     name: "Ms. Vallejo",
